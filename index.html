@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ครูพลอย</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+    <link href="https://cdn.jsdelivr.net/npm/line-seed-font@1.0.0/line-seed-font.css" rel="stylesheet">
+</head>
+<style>
+    @font-face {
+    font-family: "LINESeed";
+    src: url("LINESeedSansTH_W_Bd.woff2") format("woff");
+}
+   body {
+    font-family: "LINESeed", sans-serif;
+}
+section {
+    height: 80vh;
+    
+}
+</style>
+<body>
+<section class="flex justify-center items-center  bg-">
+<div class="text-center border-dashed sm:p-5 border-2 p-2 border-gray-200 bg-gray-100">
+    
+<h1 class="text-xl sm:text-5xl"><span class="">สวัสดีครับ</span>ครูพลอย</h1>
+
+</div>
+</section>
+<section class="flex justify-center items-center  bg-">
+    
+<div class="text-center border-dashed sm:p-5 border-2 p-2 rounded-xl border-gray-200 bg-gray-100">
+    <div id="diff" class="relative w-[600px] max-w-full aspect-video overflow-hidden rounded-xl select-none">
+  <div class="absolute inset-0 bg-gray-200 grid place-items-center text-xl font-black">
+    ปัจฉิม๒๕๖๙ก่อนจบขอให้ครูพลอยมีความสุขครับ สาธุ
+  </div>
+  <div id="topImage" class="absolute inset-0 bg-black text-white grid place-items-center text-2xl font-black overflow-hidden" style="width:50%">
+    #รักครูพลอย99หักVat7%เหลือ92.07
+  </div>
+  <div id="divider" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize" style="left:50%">
+    <div class="absolute top-1/2 -translate-y-1/2 -left-3 w-7 h-7 bg-white rounded-full shadow flex items-center justify-center">
+      ↔
+    </div>
+
+  </div>
+
+</div>
+</div>
+</section>
+<section class="flex justify-center items-center  bg-">
+<div class="text-center border-dashed sm:p-5 border-2 p-2 border-gray-200 bg-gray-100">
+<!-- ซ้าย -->
+<div class="flex flex-col items-start mb-4">
+  <div class="text-sm font-semibold">
+    ครูพลอย
+    <span class="text-xs text-gray-400 ml-1">2 ชั่วโมงที่แล้ว</span>
+  </div>
+
+  <div class="bg-gray-200 text-black px-4 py-2 rounded-2xl mt-1">
+    1+1=?
+  </div>
+
+  <div class="text-xs text-gray-400 mt-1">ส่งแล้ว</div>
+</div>
+
+<!-- ขวา -->
+<div class="flex flex-col items-end mb-4">
+  <div class="text-sm font-semibold">
+    ไดมอนด์
+    <span class="text-xs text-gray-400 ml-1">2 ชั่วโมงที่แล้ว</span>
+  </div>
+
+  <div class="bg-black text-white px-4 py-2 rounded-2xl mt-1">
+    4
+  </div>
+
+  <div class="text-xs text-gray-400 mt-1">อ่านแล้ว</div>
+</div>
+
+<!-- ซ้าย -->
+<div class="flex flex-col items-start mb-4">
+  <div class="text-sm font-semibold">
+    ครูพลอย
+    <span class="text-xs text-gray-400 ml-1">2 ชั่วโมงที่แล้ว</span>
+  </div>
+
+  <div class="bg-gray-200 text-black px-4 py-2 rounded-2xl mt-1">
+    ...
+  </div>
+
+  <div class="text-xs text-gray-400 mt-1">ส่งแล้ว</div>
+</div>
+</div>
+</section>
+<section>
+    <div class="max-w-xl mx-auto bg-white rounded-lg shadow">
+
+  <details class="border-b p-4">
+    <summary class="font-semibold cursor-pointer">
+      วัตถุประสงค์ในการจัดทำเว็ปไซต์
+    </summary>
+    <p class="text-sm mt-2 text-gray-600">
+      จากการบันทึกผลข้างต้นสรุปได้ว่าไข่เกิดก่อนไก่
+    </p>
+  </details>
+
+  <details class="border-b p-4">
+    <summary class="font-semibold cursor-pointer">
+      ประสบการณ์3ปี
+    </summary>
+    <p class="text-sm mt-2 text-gray-600">
+      ผมขอกล่าวเลยครับว่าตลอด3ปีที่ผ่านมาตั้งแต่ ม.1 ยัน ม.3 ผมได้มีโอกาสเรียนรู้เทคนิคต่างๆความรู้ต่างๆกับครูพลอยและครูได้มอบความรู้ให้ผมมากมายแต่ที่สำคัญที่สุดคือ ผมลืมแล้วครับ
+    </p>
+  </details>
+</div>
+</section>
+<script>
+const diff = document.getElementById("diff");
+const divider = document.getElementById("divider");
+const topImage = document.getElementById("topImage");
+
+let dragging = false;
+
+function move(e){
+  if(!dragging) return;
+
+  const rect = diff.getBoundingClientRect();
+  let x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+
+  x = Math.max(0, Math.min(x, rect.width));
+  const percent = (x / rect.width) * 100;
+
+  divider.style.left = percent + "%";
+  topImage.style.width = percent + "%";
+}
+
+divider.addEventListener("mousedown", () => dragging = true);
+window.addEventListener("mouseup", () => dragging = false);
+window.addEventListener("mousemove", move);
+
+divider.addEventListener("touchstart", () => dragging = true);
+window.addEventListener("touchend", () => dragging = false);
+window.addEventListener("touchmove", move);
+</script>
+ <script>
+tailwind.config = {
+  plugins: [daisyui],
+}
+</script>
+<script>
+
+</script>
+</body>
+</html>
