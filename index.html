@@ -25,10 +25,10 @@ section {
 .bg-stripe{
   background: repeating-linear-gradient(
     45deg,
-    #f9fafb,
-    #f9fafb 2px,
-    #e5e7eb 2px,
-    #e5e7eb 4px
+    #f6f5f3,
+    #f6f5f3 2px,
+    #d6d2cf 2px,
+    #d6d2cf 4px
   );
 }
 </style>
@@ -36,7 +36,7 @@ section {
 <section class="flex justify-center items-center  bg-[#f6f5f3]">
 <div class="bg-stripe text-center border-dashed sm:p-5 border-2 p-2 border-[#d6d2cf] bg-gray-100">
     
-<h1 class="text-xl sm:text-5xl text-[#4b4843]"><span class="">สวัสดีครับ</span>ครูพลอย</h1>
+<h1 class="text-2xl sm:text-5xl text-[#4b4843]"><span class="">สวัสดีครับ</span>ครูพลอย</h1>
 
 </div>
 </section>
@@ -129,6 +129,63 @@ section {
       ผมขอกล่าวเลยครับว่าตลอด3ปีที่ผ่านมาตั้งแต่ ม.1 ยัน ม.3 ผมได้มีโอกาสเรียนรู้เทคนิคต่างๆความรู้ต่างๆกับครูพลอยและครูได้มอบความรู้ให้ผมมากมายแต่ที่สำคัญที่สุดคือ ผมลืมแล้วครับ
     </p>
   </details>
+</div>
+<div class="flex justify-center items-center gap-3 mt-10">
+
+<!-- ปุ่มซ้าย -->
+<button onclick="scrollCards(-200)"
+class="px-3 py-2 bg-gray-200 rounded-lg shadow">
+←
+</button>
+
+<!-- กล่องการ์ด -->
+<div id="cardContainer"
+class="flex gap-6 overflow-x-auto scroll-smooth w-[300px] p-4">
+
+<!-- การ์ด A -->
+<div onclick="bringToFront(this)"
+class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
+flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
+ขอให้ได้เกรด4วิชาครูพลอย
+</div>
+
+<!-- การ์ด B -->
+<div onclick="bringToFront(this)"
+class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
+flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
+ขอให้ครูพลอยถูกรางวัลที่1
+</div>
+
+<!-- การ์ด C -->
+<div onclick="bringToFront(this)"
+class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
+flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
+ขอให้ครูพลอยมีความสุข
+</div>
+
+</div>
+
+<!-- ปุ่มขวา -->
+<button onclick="scrollCards(200)"
+class="px-3 py-2 bg-gray-200 rounded-lg shadow">
+→
+</button>
+
+</div>
+
+<script>
+let z = 1;
+
+function bringToFront(card){
+  z++;
+  card.style.zIndex = z;
+}
+
+function scrollCards(amount){
+  document.getElementById("cardContainer")
+  .scrollBy({ left: amount, behavior: "smooth" });
+}
+</script>
 </div>
 </section>
 <script>
