@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ครูพลอย</title>
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
     <link href="https://cdn.jsdelivr.net/npm/line-seed-font@1.0.0/line-seed-font.css" rel="stylesheet">
 </head>
+
 <style>
     @font-face {
     font-family: "LINESeed";
@@ -18,7 +20,7 @@
     font-family: "LINESeed", sans-serif;
 }
 section {
-    height: 80vh;
+    height: 100vh;
     
 }
 
@@ -34,19 +36,19 @@ section {
 </style>
 <body>
 <section class="flex justify-center items-center  bg-[#f6f5f3]">
-<div class="bg-stripe text-center border-dashed sm:p-5 border-2 p-2 border-[#d6d2cf] bg-gray-100">
+<div data-aos="zoom-in" class="bg-stripe text-center border-dashed sm:p-5 border p-2 border-[#d6d2cf] bg-gray-100">
     
-<h1 class="text-2xl sm:text-5xl text-[#4b4843]"><span class="">สวัสดีครับ</span>ครูพลอย</h1>
+<h1 class="text-2xl sm:text-5xl text-[#4b4843]"><span class="">#</span>ครูพลอย</h1>
 
 </div>
 </section>
 <section class="bg-[#f6f5f3]">
     
-<div class="text-center bg-stripe border-dashed sm:p-5 border-2 p-2 rounded-xl border-[#d6d2cf] bg-[#f6f5f3]">
+<div data-aos="flip-up" class="text-center bg-stripe border-dashed sm:p-5 border p-2  border-[#d6d2cf] bg-[#f6f5f3]">
 
   <div id="diff" class="relative w-full max-w-[600px] mx-auto aspect-video overflow-hidden rounded-xl select-none">
 
-    <div class="absolute inset-0 bg-gray-200 grid place-items-center text-sm sm:text-lg md:text-xl text-[#4b4843] p-2 break-words">
+    <div class="absolute inset-0 bg-white grid place-items-center text-sm sm:text-lg md:text-xl text-[#4b4843] p-2 break-words">
       ปัจฉิม๒๕๖๙ก่อนจบขอให้ครูพลอยมีความสุขครับ สาธุ
     </div>
 
@@ -65,7 +67,7 @@ section {
 </div>
 </section>
 <section class="flex justify-center items-center  bg-[#f6f5f3]">
-<div class="bg-stripe text-center border-dashed sm:p-5 border-2 p-2 border-[#d6d2cf] bg-gray-100">
+<div data-aos="fade-up" class="bg-stripe text-center border-dashed sm:p-5 border-2 p-2 border-[#d6d2cf] bg-gray-100">
 <!-- ซ้าย -->
 <div class="flex flex-col items-start mb-4">
   <div class="text-sm font-semibold">
@@ -73,7 +75,7 @@ section {
     <span class="text-xs text-gray-400 ml-1">2 ชั่วโมงที่แล้ว</span>
   </div>
 
-  <div class="bg-gray-200 text-black px-4 py-2 rounded-2xl mt-1">
+  <div class="bg-white text-black px-4 py-2 rounded-2xl mt-1">
     1+1=?
   </div>
 
@@ -101,7 +103,7 @@ section {
     <span class="text-xs text-gray-400 ml-1">2 ชั่วโมงที่แล้ว</span>
   </div>
 
-  <div class="bg-gray-200 text-black px-4 py-2 rounded-2xl mt-1">
+  <div class="bg-white text-black px-4 py-2 rounded-2xl mt-1">
     ...
   </div>
 
@@ -110,9 +112,9 @@ section {
 </div>
 </section>
 <section class="bg-[#f6f5f3]">
-    <div class="max-w-xl mx-auto bg-white rounded-lg shadow">
+    <div data-aos="fade-up" class=" max-w-xl mx-auto bg-white rounded-lg shadow">
 
-  <details class="border-b p-4">
+  <details data-aos="fade-up" class="border-b p-4">
     <summary class="font-semibold cursor-pointer">
       วัตถุประสงค์ในการจัดทำเว็ปไซต์
     </summary>
@@ -121,7 +123,7 @@ section {
     </p>
   </details>
 
-  <details class="border-b p-4">
+  <details data-aos="fade-up" class="border-b p-4">
     <summary class="font-semibold cursor-pointer">
       ประสบการณ์3ปี
     </summary>
@@ -133,35 +135,31 @@ section {
 <div class="flex justify-center items-center gap-3 mt-10">
 
 <!-- ปุ่มซ้าย -->
-<button onclick="scrollCards(-200)"
+<button data-aos="fade-up" onclick="scrollCards(-200)"
 class="px-3 py-2 bg-gray-200 rounded-lg shadow">
 ←
 </button>
 
 <!-- กล่องการ์ด -->
-<div id="cardContainer"
+<div data-aos="fade-up" id="cardContainer"
 class="flex gap-6 overflow-x-auto scroll-smooth w-[300px] p-4">
 
 <!-- การ์ด A -->
-<div onclick="bringToFront(this)"
+<div data-aos="fade-up" onclick="bringToFront(this)"
 class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
 flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
 ขอให้ได้เกรด4วิชาครูพลอย
 </div>
 
 <!-- การ์ด B -->
-<div onclick="bringToFront(this)"
+<div data-aos="fade-up" onclick="bringToFront(this)"
 class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
 flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
 ขอให้ครูพลอยถูกรางวัลที่1
 </div>
 
 <!-- การ์ด C -->
-<div onclick="bringToFront(this)"
-class="card min-w-[150px] h-[200px] bg-white border border-gray-300 rounded-xl shadow
-flex items-center justify-center text-center text-lg font-bold cursor-pointer transition-all">
-ขอให้ครูพลอยมีความสุข
-</div>
+
 
 </div>
 
@@ -223,6 +221,9 @@ tailwind.config = {
 </script>
 <script>
 
+</script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>
